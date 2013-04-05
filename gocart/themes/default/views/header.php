@@ -21,7 +21,7 @@
 <?php //echo theme_js('squard.js', true);?>
 <?php //echo theme_js('equal_heights.js', true);?>
 
-
+<!-- favicon and touch icons for bookmarking -->
 <link rel="shortcut icon" href="<?php echo base_url('gocart/themes/default/assets/ico/favicon.ico');?>">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo base_url('gocart/themes/default/assets/ico/apple-touch-icon-144-precomposed.png');?>">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url('gocart/themes/default/assets/ico/apple-touch-icon-114-precomposed.png');?>">
