@@ -1,0 +1,29 @@
+
+@font-face {
+    font-family: 'patenregular';
+    src: url('../fonts/paten-webfont.eot');
+    src: url('../fonts/paten-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/paten-webfont.woff') format('woff'),
+         url('../fonts/paten-webfont.ttf') format('truetype'),
+         url('../fonts/paten-webfont.svg#patenregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+h1,h2,h3,.brand,.btn,.nav,.patenfont{font-family: 'patenregular';}
+body {
+color: #444;
+}
+.navbar-search{
+margin-top:15px;
+}
+.navbar-search .search-query{
+line-height: 2;
+}
+.breadcrumb {
+background-color: #F2F2F2;
+padding:0;
+}
+.menu_items a{
+color:#444;
+}
