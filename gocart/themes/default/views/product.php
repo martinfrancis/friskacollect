@@ -85,7 +85,8 @@
 				
 		<div class="row-fluid well">
 			<div class="span12">
-			<p>I want it</p>
+			<p>I want it <span class="pull-right"> Pay By:- <img src="<?php echo base_url('gocart/themes/default');?>/assets/images/credit_card_logos2.jpg" alt="credit card logos" /></span>
+			</p>
 			<h4>Order and collect</h4>
 				<div class="product-cart-form">
 					<?php echo form_open('cart/add_to_cart', 'class="form-horizontal"');?>
@@ -210,7 +211,7 @@
 								<?php if(!$product->fixed_quantity) : ?>
 									<input class="span2" type="text" name="quantity" value=""/>
 								<?php endif; ?>
-								<button class="btn btn-primary btn-large" type="submit" value="submit"><i class="icon-shopping-cart icon-white"></i> <?php echo lang('form_add_to_cart');?></button>
+								<button class="cart_button btn btn-primary btn-large" type="submit" value="submit"><i class="icon-shopping-cart icon-white"></i> <?php echo lang('form_add_to_cart');?></button>
 								<?php else: ?>
 									<?php if((bool)$product->track_stock && $product->quantity < 1 && config_item('inventory_enabled')):?>
 										<p><strong><span class="text-error"><?php echo lang('out_of_stock');?></span></strong></p>

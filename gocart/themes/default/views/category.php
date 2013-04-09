@@ -28,7 +28,7 @@
     <?php endif;?>
     
     <div class="row">
-		<div class="span3">
+		<div class="span3 visible-desktop">
 				<p>Pictures to go here or more information about <?php echo $page_title; ?></p>
 		</div>
 	

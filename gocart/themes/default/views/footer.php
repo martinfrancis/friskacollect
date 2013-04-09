@@ -4,10 +4,7 @@
 <div class="container">
 <div class="row-fluid">
 <div class="span3">
-
-<?php //echo base_url('gocart/themes/default');/assets/images/friska_logo.gif ?>
-
-<p><a href="." title="home page"><img src="<?php echo base_url($this->config->item('site_logo'));?>" alt="<?php echo $this->config->item('company_name');?>"></a></p>
+<p><a href="<?php echo site_url();?>" title="home page"><img src="<?php echo base_url($this->config->item('site_logo'));?>" alt="<?php echo $this->config->item('company_name');?>"></a></p>
 </div>
 <div class="span6">
 	<div class="fb_box">
@@ -85,13 +82,13 @@
 			</ul>
 		</div>
 		<h3>Friska News</h3>
-		<p>Check out the <a href="twitter_feed.html" class="btn">Friska Love <i class="icon-heart"></i></a></p>
+		<p>Check out the <a href="<?php echo site_url('page/twitter_feed');?>" class="btn">Friska Love <i class="icon-heart"></i></a></p>
 	</div>
 	<div class="span3">
 		<h3>Specials</h3>
 		<div class="specials">
 		<script type="text/javascript" src="<?php echo base_url('gocart/themes/default');?>/assets/js/specials.js"></script>
-		<p><a class="btn" href="soups.html">See all Soups &raquo;</a></p>
+		<p><a class="btn" href="<?php echo site_url('/soups');?>">See all Soups &raquo;</a></p>
 		</div>
 		<h3>Good Causes</h3>
 		<a href="deki.html" title="find out about Deki"><img src="<?php echo base_url('gocart/themes/default');?>/assets/images/deki_logo.png" alt="deki logo"></a>
@@ -101,36 +98,36 @@
 <h3>Yummy</h3>
 <ul class="thumbnails">
               <li class="span5">
-                <a href="breakfast.html" title="breakfast" class="thumbnail">
+                <a href="<?php echo site_url('/breakfast');?>" title="breakfast" class="thumbnail">
                    <img src="<?php echo base_url('gocart/themes/default');?>/assets/pics_300/the_house_bacon_sandwich.jpg" alt="the_house_bacon_sandwich" />
 				</a>
               </li>
 			  <li class="span5">
-                <a href="breakfast.html" title="breakfast" class="thumbnail">
+                <a href="<?php echo site_url('/breakfast');?>" title="breakfast" class="thumbnail">
                    <img src="<?php echo base_url('gocart/themes/default');?>/assets/pics_300/house_eggs.jpg" alt="house_eggs" />
                 </a>
               </li>
  </ul>
 <ul class="thumbnails">		 
 			 <li class="span5">
-                <a href="lunch.html" title="lunch" class="thumbnail">
+                <a href="<?php echo site_url('/lunch');?>" title="lunch" class="thumbnail">
                    <img src="<?php echo base_url('gocart/themes/default');?>/assets/pics_300/chicken_sandwich_wide.jpg" alt="chicken_sandwich_wide" />
                 </a>
               </li>
 			     <li class="span5">
-                <a href="lunch.html" title="lunch" class="thumbnail">
+                <a href="<?php echo site_url('/lunch');?>" title="lunch" class="thumbnail">
                    <img src="<?php echo base_url('gocart/themes/default');?>/assets/pics_300/falafel_and_hummus_salad_box.jpg" alt="falafel_and_hummus_salad_box" />
                 </a>
               </li>
 			  </ul>
 	<ul class="thumbnails">			  
 			  <li class="span5">
-                <a href="dinner.html" title="dinner" class="thumbnail">
+                <a href="<?php echo site_url('/dinner');?>" title="dinner" class="thumbnail">
                    <img src="<?php echo base_url('gocart/themes/default');?>/assets/pics_300/mackerel_salad_wide.jpg" alt="mackerel_salad_wide" />
                 </a>
               </li>
 			     <li class="span5">
-                <a href="soups.html" title="soup" class="thumbnail">
+                <a href="<?php echo site_url('/soups');?>" title="soup" class="thumbnail">
                    <img src="<?php echo base_url('gocart/themes/default');?>/assets/pics_300/minted_spring_green_soup_wide.jpg" alt="minted_spring_green_soup_wide" />
                 </a>
               </li>
@@ -144,7 +141,7 @@
 <div class="container">
 <div class="row-fluid">
 	<div class="span3">
-				<p><a href="." title="home page"><img src="<?php echo base_url($this->config->item('site_logo_alternate'));?>" alt="<?php echo $this->config->item('company_name');?> logo"></a>
+				<p><a href="<?php echo site_url();?>" title="home page"><img src="<?php echo base_url($this->config->item('site_logo_alternate'));?>" alt="<?php echo $this->config->item('company_name');?> logo"></a>
 			<?php 
 			//<a class="btn btn-large pull-right" href="to_do.html">To do</a>
 			?>
@@ -152,16 +149,20 @@
 			<p>Copyright &copy; <?php echo $this->config->item('company_name');?> <?php echo date("Y"); ?> </p>
 			
 	</div>
-	<div class="span6">
+	<div class="span3">
 		<ul class="unstyled patenfont footer_nav">
-			<li><a href="cookies.html" title="cookie policy">Cookie Policy</a></li>
-			<li><a href="privacy_statement.html" title="privacy statement">Privacy Statement</a></li>
-			<li><a href="accessibility.html" title="accessibility statement">Accessibility</a></li>
+			<li><a href="<?php echo site_url('page/cookies');?>" title="cookie policy">Cookie Policy</a></li>
+			<li><a href="<?php echo site_url('page/privacy_statement');?>" title="privacy statement">Privacy Statement</a></li>
+			<li><a href="<?php echo site_url('page/accessibility');?>" title="accessibility statement">Accessibility</a></li>
 		</ul>
 	</div>
 	<div class="span3">
-		<p>Phone Numbers can be found on our <a href="contact.html" title="contact">contact</a> page or we can be emailed at
-		<a class="email" href="mailto:hello@friskafood.com">hello@friskafood.com</a></p>
+		<p>Cards Accepted</p>
+		<img src="<?php echo base_url('gocart/themes/default');?>/assets/images/credit_card_logos.jpg" alt="credit card logos" />
+	</div>
+	<div class="span3">
+		<p>Phone Numbers can be found on our <a href="contact" title="contact">contact</a> page or we can be emailed at
+		<a class="email" href="mailto:<?php echo ($this->config->item('email'));?>"><?php echo ($this->config->item('email'));?></a></p>
 	</div>
 	
 	
@@ -198,7 +199,7 @@
 <!-- Modal -->
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
+		<button type="button" title="close form" class="close" data-dismiss="modal" aria-hidden="true">x</button>
 			<h3 id="myModalLabel">Join the Mailing List</h3>
 	</div>
 				

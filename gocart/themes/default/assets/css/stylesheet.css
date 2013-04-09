@@ -11,9 +11,7 @@
 
 }
 h1,h2,h3,.brand,.btn,.nav,.patenfont{font-family: 'patenregular';}
-body {
-color: #444;
-}
+body {color: #444;}
 .navbar-search{
 margin-top:15px;
 }
@@ -26,4 +24,29 @@ padding:0;
 }
 .menu_items a{
 color:#444;
+}
+@media (max-width: 979px) and (min-width: 768px){
+ .cart {
+ margin:20px 0px 0px 20px;
+ }
+ .bs-docs-sidenav{
+ margin-top:0px;
+ }
+ .cart_button{
+  margin:10px 0px 0px 0px;
+ }
+ }
+@media (max-width: 767px){
+.cart {
+ margin:20px 0px 0px 0px;
+ }
+ .bs-docs-sidenav{
+ margin-top:0px;
+ }
+ .page-header {
+margin: 0px;
+}
+.cart_button{
+  margin:10px 0px 0px 0px;
+ }
 }

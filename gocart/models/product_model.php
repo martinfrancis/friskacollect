@@ -108,14 +108,18 @@ Class Product_model extends CI_Model
         {
            // $result = $this->db->select('category_products.*, LEAST(IFNULL(NULLIF(saleprice, 0), price), price) as sort_price', false)->from('category_products')->join('products', 'category_products.product_id=products.id')->where(array('category_id'=>$category_id, 'enabled'=>1));
            
+		   
+		   // first attempt at new query Martin 25.03.12, simplied with no join. 
+		   // Variables used for pagination not necessary. 
 		   //$result = $this->db->select('category_products.*')->from('category_products')->where(array('category_id'=>$category_id))->order_by('sequence', 'ASC')->get()->result();
 		   
+		   // Final query with the join added back in so that product description can be accessed. Martin 26.03.12
 		   $result = $this->db->select('category_products.*')->from('category_products')->join('products', 'category_products.product_id=products.id')->where(array('category_id'=>$category_id,'enabled'=>1))->order_by('sequence', 'ASC')->get()->result();
 
-                        // $this->db->order_by($by, $sort);
-            
+            // $this->db->order_by($by, $sort);
             // $result    = $this->db->limit($limit)->offset($offset)->get()->result();
-            $contents    = array();
+            
+			$contents    = array();
             $count        = 0;
             foreach ($result as $product)
             {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title><?php echo (!empty($seo_title)) ? $seo_title .' - ' : ''; echo $this->config->item('company_name'); ?></title>
@@ -55,8 +55,9 @@ if(isset($additional_header_info))
 				</a>
 				<div class="nav-collapse">
 					<ul class="nav pull-right">
-						<li><?php echo form_open('cart/search', 'class="navbar-search pull-right"');?>
-							<input type="text" name="term" class="search-query span2" placeholder="<?php echo lang('search_menu');?>"/></form>
+						<li><?php echo form_open('cart/search', 'class="navbar-search pull-right form-search"');?>
+							<label for="term" class="form-search hide">Search Term</label>
+							<input type="text" id="term" name="term" class="search-query span2" placeholder="<?php echo lang('search_menu');?>"/></form>
 						</li>
 						<li><a href="<?php echo site_url();?>" title="go to <?php echo lang('home');?> page"><?php echo lang('home');?></a></li>
 						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo lang('menu');?> <b class="caret"></b></a>
@@ -93,7 +94,22 @@ if(isset($additional_header_info))
 					</ul>
 				</div>
 			</div>
-			<p class="pull-right">					
+			<p class="pull-right visible-desktop">					
+				<a href="<?php echo site_url('cart/view_cart');?>"><i class="icon-shopping-cart"></i>
+						<?php
+							if ($this->go_cart->total_items()==0){
+								echo lang('empty_cart');}
+								else{
+								if($this->go_cart->total_items() > 1){
+									echo sprintf (lang('multiple_items'), $this->go_cart->total_items());}
+										else{
+												echo sprintf (lang('single_item'), $this->go_cart->total_items());
+											}
+										}
+						?>
+						</a>
+			</p>
+			<p class="cart pull-left hidden-desktop">					
 				<a href="<?php echo site_url('cart/view_cart');?>"><i class="icon-shopping-cart"></i>
 						<?php
 							if ($this->go_cart->total_items()==0){
@@ -134,10 +150,7 @@ if(isset($additional_header_info))
 				<?php endif;?>
 			</div>
 		</div>
-		
-		
-		
-		
+				
 		<?php if ($this->session->flashdata('message')):?>
 			<div class="alert alert-info">
 				<a class="close" data-dismiss="alert">×</a>
