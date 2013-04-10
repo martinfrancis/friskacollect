@@ -22,7 +22,7 @@
        
     <?php if((!isset($subcategories) || count($subcategories)==0)):?>
         <div class="alert alert-info">
-            <a class="close" data-dismiss="alert">×</a>
+            <a class="close" data-dismiss="alert">ï¿½</a>
             <?php echo lang('no_products');?>
         </div>
     <?php endif;?>
@@ -82,7 +82,8 @@
 		<div class="span3">
 				<?php
 				if (($page_title=='Breakfast') ||($page_title=='Sundries/Sides')): 
-				//if ($page_title=='Breakfast'): 
+				// With product_view.php there is a way of adding extra product content anywhere on the website.
+                                
 				$a="Friska Coffee";$b=31;
 				include('product_view.php'); 
 				$a="Hot Chocolate";$b=32;
